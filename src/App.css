@@ -1,38 +1,340 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  margin: 0 auto;
+  max-width: 1312px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background: #f4f4f4;
+}
+
+.insuranceCalculation {
+  font-family: Inter;
+  margin: 0 auto;
+  position: relative;
+}
+
+.insuranceCalculation__insuranceComponies {
+  background: #fff;
+  width: 100%;
+  padding: 40px 48px;
+  border-radius: 16px;
+  border: 1px solid #EDEDED;
+  margin-bottom: 72px;
+}
+
+.insuranceCalculation__title {
+  font-size: 40px;
+  font-weight: 600;
+  color: #2b2b2b;
+  padding-bottom: 40px;
+}
+
+.insuranceCalculation__insuranceComponies__header__left__text {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.insuranceCalculation__insuranceComponies__header__left {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.insuranceCalculation__insuranceComponies__header__left__logo {
+  padding-right: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.insuranceCalculation__insuranceComponies__header__right .ant-btn {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2b2b2b;
+  padding: 6px 24px;
+  border: 2px solid #4DB663;
+  border-radius: 8px;
+  box-sizing: content-box;
+}
+
+.insuranceCalculation__insuranceComponies__header__right .ant-btn svg {
+  margin-right: 8px;
+}
+
+.insuranceCalculation__insuranceComponies__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 32px;
+}
+
+.insuranceCalculation__insuranceComponies__search {
+  height: 72px;
+  margin-bottom: 24px;
+}
+
+.insuranceCalculation__insuranceComponies__search .ant-input-search {
+  height: 100%;
+}
+
+.insuranceCalculation__insuranceComponies__search .ant-input-search .ant-input-affix-wrapper {
+  background: transparent;
+  border: none;
+  padding-right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: none;
+}
+
+.insuranceCalculation__insuranceComponies__search .ant-input-search .ant-input,
+.insuranceCalculation__insuranceComponies__search .ant-input-search .ant-input::placeholder {
+  background: transparent;
+  font-size: 18px;
+  color: #2b2b2b;
+}
+
+.insuranceCalculation__insuranceComponies__search .ant-input-search .ant-input-group-addon {
+  background: transparent;
+}
+
+.insuranceCalculation__insuranceComponies__search .ant-input-search .ant-input-search-button {
+  background: transparent;
+  border: none;
+  padding-left: 18px;
+  height: calc(100% - 2px);
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.insuranceCalculation__insuranceComponies__search .ant-input-search .ant-input-wrapper {
+  background: #F4F4F4;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.insuranceCalculation__insuranceComponies__search .ant-input-search .ant-input-suffix {
+  padding-right: 20px;
+  border-right: 2px solid #BCBEC0;
+  height: 40px;
+}
+
+.insuranceCalculation__insuranceComponies__search__closeIcon {
+  cursor: pointer
+}
+
+.insuranceSliderTabs__item {
+  padding: 15px 16px;
+  color: #2B2B2B;
+  font-size: 18px;
+  border: 1px solid #BCBEC0;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 0;
+}
+
+.insuranceSliderTabs__item+.insuranceSliderTabs__item {
+  margin-left: 16px;
+}
+
+.insuranceSliderTabs {
+  display: flex;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  margin: 0 25px;
+}
+
+.insuranceSliderTabs>div {
+  flex-flow: row;
+  padding-left: 10px;
+}
+
+.insuranceSliderTabs__item.active {
+  font-weight: 500;
+  color: #fff;
+  background: #2b2b2b;
+  border: none;
+}
+
+.insuranceSliderTabs__button {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.16);
+  border: none;
+}
+
+.insuranceSliderTabs__button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.insuranceSliderTabs__button.right {
+  transform: rotate(180deg);
+}
+
+.insuranceSliderTabs__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.insuranceCalculation__selectBank__topBlock {
+  border: 1px solid #BCBEC0;
+  border-radius: 16px;
+  padding: 24px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.insuranceCalculation__selectBank__topBlock__text__subtitle {
+  color: #7a7a7a;
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 8px;
+}
+
+.insuranceCalculation__selectBank__topBlock__text__title {
+  color: #2b2b2b;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.insuranceCalculation__selectBank__topBlock__button {
+  background: transparent !important;
+  border: 2px solid #4DB663 !important;
+  border-radius: 8px;
+  box-sizing: content-box;
+  padding: 6px 24px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2B2B2B !important;
+}
+
+.insuranceCalculation__selectBank__topBlock__button svg {
+  margin-right: 8px;
+}
+
+.insuranceCalculation__selectBank__table__item {
+  padding: 40px 32px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  transition: border 0.3s;
+}
+
+.insuranceCalculation__selectBank__table__item__name svg {
+  margin-right: 16px;
+  min-width: 32px;
+}
+
+.insuranceCalculation__selectBank__table__item__name p {
+  display: inline-block;
+  color: #2b2b2b;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.insuranceCalculation__selectBank__table__item__name {
+  display: flex;
+  align-items: center;
+}
+
+.insuranceCalculation__selectBank__table__item+.insuranceCalculation__selectBank__table__item {
+  margin-top: 16px;
+}
+
+.insuranceCalculation__selectBank__table__item__values p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.insuranceCalculation__selectBank__table__header__values p {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #7a7a7a;
+}
+
+.insuranceCalculation__selectBank__table__item__values,
+.insuranceCalculation__selectBank__table__header__values {
+  display: flex;
+}
+
+.insuranceCalculation__selectBank__table__header__values__item,
+.insuranceCalculation__selectBank__table__item__values__item {
+  width: 20%;
+}
+
+.insuranceCalculation__selectBank__table__item__editButton {
+  box-sizing: content-box;
+  border: 1px solid #BCBEC0;
+  border-radius: 8px;
+  padding: 0;
+  height: 48px;
+  width: 48px;
+}
+
+.insuranceCalculation__selectBank__table__item .ant-row {
+  align-items: center;
+}
+
+.insuranceCalculation__selectBank__table__item:hover {
+  border: 1px solid #7A7A7A;
+}
+
+.insuranceCalculation__selectBank__table__item:hover .insuranceCalculation__selectBank__table__item__editButton {
+  background: #2B2B2B;
+}
+
+.insuranceCalculation__selectBank__table__item .insuranceCalculation__selectBank__table__item__editButton path {
+  color: #2b2b2b;
+  transition: fill 0.3s;
+}
+
+.insuranceCalculation__selectBank__table__item:hover .insuranceCalculation__selectBank__table__item__editButton path {
+  fill: #fff;
+}
+
+.insuranceCalculation__selectBank__table__header {
+  padding: 16px 32px;
+}
+
+.insuranceCalculation__selectBank__table__header__sort {
+  display: flex;
+  align-items: center;
+}
+
+.insuranceCalculation__selectBank__table__header__sort svg {
+  margin-right: 12px;
+}
+
+.insuranceCalculation__selectBank__table__header__sort p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2b2b2b;
+}
+
+.insuranceCalculation__selectBank__table__header__sort {
+  position: absolute;
+  left: 0;
 }
